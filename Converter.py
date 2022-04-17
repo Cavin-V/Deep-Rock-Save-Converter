@@ -247,7 +247,7 @@ else: #If quick convert is false
             traceback.print_exc()
             print("An error occured, please try again.")
             time.sleep(5)
-    print("Step three: Please enter the direction you want to convert your save data. (steam, for if you want to convert from windows to steam, or windows if you want to convert from windows to steam.\nOnce this is set up, you may run the program again and it will automatically convert your save data.\n")
+    print("Step three: Please enter the direction you want to convert your save data. (steam, for if you want to convert from windows to steam, or windows if you want to convert from steam to windows.\nOnce this is set up, you may run the program again and it will automatically convert your save data.\n")
     while True:
         try:
             answer = input()
@@ -263,6 +263,8 @@ else: #If quick convert is false
             traceback.print_exc()
             print("An error occured, please try again.")
             time.sleep(5)
+    print("Congratulations! you have set up the converter, the script will now close, upon relaunching, it will automatically convert your save data.")
+    time.sleep(5)
     #Write the config file
     with open("config.txt", "w") as f:
         f.write("quick_convert="+str(True)+"\n")
